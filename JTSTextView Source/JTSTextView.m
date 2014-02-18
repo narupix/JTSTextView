@@ -65,6 +65,7 @@
     NSTextContainer *container = [[NSTextContainer alloc] initWithSize:CGSizeMake(self.frame.size.width, 100000)];
     [layoutManager addTextContainer:container];
     self.textView = [[UITextView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 100000) textContainer:container];
+    self.textView.backgroundColor = [UIColor clearColor];
     self.textView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     [self addSubview:self.textView];
     self.textView.showsHorizontalScrollIndicator = NO;
@@ -247,7 +248,6 @@
 
 - (void)setBackgroundColor:(UIColor *)backgroundColor {
     [super setBackgroundColor:backgroundColor];
-    [self.textView setBackgroundColor:backgroundColor];
 }
 
 - (UIFont *)font {
